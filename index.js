@@ -1,4 +1,15 @@
 // Seu código aqui!
+function filteredFunction (category){ 
+  filteredProducts = [];
+
+  for (let product of products) {
+    if (product.tags.includes(category)) {
+      filteredProducts.push(product);
+
+    }
+  }
+  return filteredProducts;
+}
 
 const products = [
   {
@@ -24,3 +35,4 @@ const products = [
 ];
 
 // Declare sua funçao aqui. Nao se esqueça de invocar a função para conseguir testar!
+filteredFunction('apple');
