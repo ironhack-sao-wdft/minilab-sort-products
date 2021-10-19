@@ -1,5 +1,3 @@
-// Seu código aqui!
-
 const products = [
   {
     id: 1,
@@ -23,4 +21,17 @@ const products = [
   },
 ];
 
-// Declare sua funçao aqui. Nao se esqueça de invocar a função para conseguir testar!
+
+function filterProducts(category) {
+ let tagApple = []
+  for(let i = 0; i < products.length; i++) {
+    for(let j = 0; j < products[i].tags.length; j++) {
+      if(products[i].tags[j] === category) {
+          tagApple.push(products[i]) 
+      }
+    }
+  }
+  console.log(tagApple)
+}
+
+filterProducts('apple')
