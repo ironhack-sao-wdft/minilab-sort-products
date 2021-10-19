@@ -23,15 +23,16 @@ const products = [
 
 
 function filterProducts(category) {
- let tagApple = []
+ let categoryArr = []
   for(let i = 0; i < products.length; i++) {
     for(let j = 0; j < products[i].tags.length; j++) {
       if(products[i].tags[j] === category) {
-          tagApple.push(products[i]) 
+          categoryArr.push(products[i]) 
       }
     }
   }
-  console.log(tagApple)
+  return categoryArr
 }
 
-filterProducts('apple')
+const result = filterProducts('apple')
+filterProducts(result)
