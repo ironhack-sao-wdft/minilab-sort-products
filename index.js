@@ -23,4 +23,21 @@ const products = [
   },
 ];
 
+//console.log(Object.keys(products))
+
 // Declare sua funçao aqui. Nao se esqueça de invocar a função para conseguir testar!
+
+function filterProducts(category) {
+  let vetor = []
+  for(let i = 0; i < products.length; i++) {
+    for(let j = 0; j < Object.values(products)[i].tags.length; j++) {
+      if (Object.values(products)[i].tags[j] === category) {
+        vetor.push(Object.values(products)[i])
+      } 
+    }
+  }
+  return vetor
+}
+
+
+console.log(filterProducts('apple'))
